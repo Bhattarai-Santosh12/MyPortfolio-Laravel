@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Education\Pages;
 use App\Filament\Resources\Education\EducationResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
+use Filament\Notifications\Notification;
 
 class EditEducation extends EditRecord
 {
@@ -15,5 +16,17 @@ class EditEducation extends EditRecord
         return [
             DeleteAction::make(),
         ];
+    }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+    protected function getSavedNotification(): ?Notification
+    {
+        return Notification::make()
+            ->success()
+            ->title('Updated')
+            ->body('Updated successfully.');
     }
 }

@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Filament\Resources\Experiences\Pages;
+namespace App\Filament\Resources\Skills\Pages;
 
-use App\Filament\Resources\Experiences\ExperienceResource;
+use App\Filament\Resources\Skills\SkillsResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 use Filament\Notifications\Notification;
 
-class EditExperience extends EditRecord
+class EditSkills extends EditRecord
 {
-    protected static string $resource = ExperienceResource::class;
+    protected static string $resource = SkillsResource::class;
 
     protected function getHeaderActions(): array
     {
@@ -27,6 +27,6 @@ class EditExperience extends EditRecord
         return Notification::make()
             ->success()
             ->title('Updated')
-            ->body('Updated successfully.');
+            ->body('Updated Successfully.');
     }
 }

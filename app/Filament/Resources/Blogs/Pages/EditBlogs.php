@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Filament\Resources\Experiences\Pages;
+namespace App\Filament\Resources\Blogs\Pages;
 
-use App\Filament\Resources\Experiences\ExperienceResource;
+use App\Filament\Resources\Blogs\BlogsResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 use Filament\Notifications\Notification;
 
-class EditExperience extends EditRecord
+class EditBlogs extends EditRecord
 {
-    protected static string $resource = ExperienceResource::class;
+    protected static string $resource = BlogsResource::class;
 
     protected function getHeaderActions(): array
     {

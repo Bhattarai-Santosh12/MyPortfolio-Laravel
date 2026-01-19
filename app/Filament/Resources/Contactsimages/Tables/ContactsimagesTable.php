@@ -1,30 +1,22 @@
 <?php
 
-namespace App\Filament\Resources\Aboutuses\Tables;
+namespace App\Filament\Resources\Contactsimages\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Table;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ImageColumn;
 
-class AboutusesTable
+class ContactsimagesTable
 {
     public static function configure(Table $table): Table
     {
         return $table
-           ->columns([
+            ->columns([
                 ImageColumn::make('image')
-                    ->label('Image')
-                    ->disk('public')
-                    ->circular()
-                    ->height(50)
-                    ->visibility('public'),
-
-                TextColumn::make('description')
-                    ->html()
-                    ->limit(15),
+                    ->label('Contact Image')
+                    ->rounded(),
             ])
             ->filters([
                 //

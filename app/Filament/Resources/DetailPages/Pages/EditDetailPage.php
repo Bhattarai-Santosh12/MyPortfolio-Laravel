@@ -5,6 +5,7 @@ namespace App\Filament\Resources\DetailPages\Pages;
 use App\Filament\Resources\DetailPages\DetailPageResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
+use Filament\Notifications\Notification;
 
 class EditDetailPage extends EditRecord
 {
@@ -15,5 +16,17 @@ class EditDetailPage extends EditRecord
         return [
             DeleteAction::make(),
         ];
+    }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+    protected function getSavedNotification(): ?Notification
+    {
+        return Notification::make()
+            ->success()
+            ->title('Updated')
+            ->body('Updated successfully.');
     }
 }

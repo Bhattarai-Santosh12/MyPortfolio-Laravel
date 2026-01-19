@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\HomePage;
 use App\Livewire\About;
+use App\Livewire\ShowBlogPage;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -13,3 +14,4 @@ use App\Livewire\About;
 
 Route::get('/', HomePage::class)->name('index');
 // Route::get('/about', About::class)->name('about');
+Route::get('/blogs/{id}', ShowBlogPage::class)->name('blogs');

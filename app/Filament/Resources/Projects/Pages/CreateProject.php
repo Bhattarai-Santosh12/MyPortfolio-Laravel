@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\Education\Pages;
+namespace App\Filament\Resources\Projects\Pages;
 
-use App\Filament\Resources\Education\EducationResource;
+use App\Filament\Resources\Projects\ProjectResource;
 use Filament\Resources\Pages\CreateRecord;
 use Filament\Notifications\Notification;
 
-class CreateEducation extends CreateRecord
+class CreateProject extends CreateRecord
 {
-    protected static string $resource = EducationResource::class;
+    protected static string $resource = ProjectResource::class;
 
     protected function getRedirectUrl(): string
     {

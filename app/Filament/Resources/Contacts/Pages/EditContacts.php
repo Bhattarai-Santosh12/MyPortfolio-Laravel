@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Filament\Resources\Experiences\Pages;
+namespace App\Filament\Resources\Contacts\Pages;
 
-use App\Filament\Resources\Experiences\ExperienceResource;
+use App\Filament\Resources\Contacts\ContactsResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 use Filament\Notifications\Notification;
 
-class EditExperience extends EditRecord
+class EditContacts extends EditRecord
 {
-    protected static string $resource = ExperienceResource::class;
+    protected static string $resource = ContactsResource::class;
 
     protected function getHeaderActions(): array
     {
@@ -17,7 +17,6 @@ class EditExperience extends EditRecord
             DeleteAction::make(),
         ];
     }
-
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');

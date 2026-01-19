@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\Education\Pages;
+namespace App\Filament\Resources\Contacts\Pages;
 
-use App\Filament\Resources\Education\EducationResource;
+use App\Filament\Resources\Contacts\ContactsResource;
 use Filament\Resources\Pages\CreateRecord;
 use Filament\Notifications\Notification;
 
-class CreateEducation extends CreateRecord
+class CreateContacts extends CreateRecord
 {
-    protected static string $resource = EducationResource::class;
+    protected static string $resource = ContactsResource::class;
 
     protected function getRedirectUrl(): string
     {
@@ -19,6 +19,6 @@ class CreateEducation extends CreateRecord
         return Notification::make()
             ->success()
             ->title('Created')
-            ->body('Created Successfully.');
+            ->body('created successfully.');
     }
 }
