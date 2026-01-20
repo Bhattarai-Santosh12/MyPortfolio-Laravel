@@ -15,7 +15,7 @@ class BlogsTable
     {
         return $table
             ->columns([
-                ImageColumn::make('image')->label('Image')->rounded(),
+                ImageColumn::make('image')->disk('public')->label('Image')->rounded(),
                 TextColumn::make('title')->label('Title')->searchable()->sortable(),
                 TextColumn::make('author')->label('Author')->searchable()->sortable(),
                 TextColumn::make('created_at')->label('Created At')->dateTime()->sortable()

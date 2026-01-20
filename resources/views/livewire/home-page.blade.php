@@ -76,11 +76,23 @@
 
                         <div class="counter-wrap ftco-animate d-flex mt-md-3">
                             <div class="text">
-                                <p>
+                                {{-- <p>
                                     <a href="#" class="btn btn-primary py-3 px-3">
                                         Download CV
                                     </a>
-                                </p>
+                                </p> --}}
+                                @php
+    $cvPath = $about->first()?->cvdownload; // get the single CV
+@endphp
+
+@if($cvPath)
+    <a href="{{ asset('storage/'.$cvPath) }}" class="btn btn-primary py-3 px-3" download="My_CV.pdf">
+        Download CV
+    </a>
+@else
+    <button class="btn btn-secondary py-3 px-3" disabled>No CV Available</button>
+@endif
+
                             </div>
                         </div>
 

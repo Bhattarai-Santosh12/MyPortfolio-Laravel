@@ -15,7 +15,7 @@ class ProjectsTable
     {
         return $table
             ->columns([
-                ImageColumn::make('image')->label('Image')->circular()->height(50),
+                ImageColumn::make('image')->disk('public')->label('Image')->circular()->height(50),
                 TextColumn::make('title')->label('Project Title'),
                 TextColumn::make('link')->label('Link')
             ])

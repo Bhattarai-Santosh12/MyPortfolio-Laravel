@@ -17,7 +17,7 @@ class AboutusForm
                 ->disk('public')  
                 ->directory('aboutus')
                 ->columnSpan(2),
-                FileUpload::make('image')
+                FileUpload::make('cvdownload')
                 ->disk('public')  
                 ->directory('aboutus')
                 ->columnSpan(2),

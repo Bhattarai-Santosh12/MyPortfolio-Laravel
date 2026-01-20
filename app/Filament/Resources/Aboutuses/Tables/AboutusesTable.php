@@ -19,12 +19,20 @@ class AboutusesTable
                     ->label('Image')
                     ->disk('public')
                     ->circular()
-                    ->height(50)
-                    ->visibility('public'),
-
+                    ->height(50),
                 TextColumn::make('description')
                     ->html()
-                    ->limit(15),
+                    ->label('Description')
+                    ->getStateUsing(function ($record) {
+                        $words = explode(' ', strip_tags($record->description));
+                        $firstWords = array_slice($words, 0, 10);
+                        $text = implode(' ', $firstWords);
+                        if (count($words) > 10) {
+                            $text .= '...';
+                        }
+                        return $text;
+                }),
+
             ])
             ->filters([
                 //

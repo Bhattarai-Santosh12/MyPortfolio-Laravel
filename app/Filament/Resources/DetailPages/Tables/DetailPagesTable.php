@@ -15,7 +15,7 @@ class DetailPagesTable
     {
         return $table
             ->columns([
-                ImageColumn::make('image')->label('Image')->circular()->height(50),
+                ImageColumn::make('image')->label('Image')->disk('public')->circular()->height(50),
                 TextColumn::make('greetings'),
                 TextColumn::make('short_discription'),
                 TextColumn::make('discription'),

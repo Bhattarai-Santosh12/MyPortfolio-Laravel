@@ -16,6 +16,7 @@ class ContactsimagesTable
             ->columns([
                 ImageColumn::make('image')
                     ->label('Contact Image')
+                    ->disk('public')
                     ->rounded(),
             ])
             ->filters([

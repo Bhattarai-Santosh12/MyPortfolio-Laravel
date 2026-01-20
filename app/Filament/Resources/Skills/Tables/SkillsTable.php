@@ -15,7 +15,7 @@ class SkillsTable
     {
         return $table
             ->columns([
-                ImageColumn::make('image')->label('Image')->circular()->height(50)->sortable()->searchable(),
+                ImageColumn::make('image')->disk('public')->label('Image')->circular()->height(50)->sortable()->searchable(),
                 TextColumn::make('title')->label('Title')->sortable()->searchable()
             ])
             ->filters([
