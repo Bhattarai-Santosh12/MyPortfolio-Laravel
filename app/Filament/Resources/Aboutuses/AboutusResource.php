@@ -7,7 +7,7 @@ use App\Filament\Resources\Aboutuses\Pages\EditAboutus;
 use App\Filament\Resources\Aboutuses\Pages\ListAboutuses;
 use App\Filament\Resources\Aboutuses\Schemas\AboutusForm;
 use App\Filament\Resources\Aboutuses\Tables\AboutusesTable;
-use App\Models\Aboutus;
+use App\Models\AboutUs;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -20,7 +20,7 @@ class AboutusResource extends Resource
     protected static ?string $pluralModelLabel = 'About Us';
     protected static ?string $slug = 'about-us';
     
-    protected static ?string $model = Aboutus::class;
+    protected static ?string $model = AboutUs::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 

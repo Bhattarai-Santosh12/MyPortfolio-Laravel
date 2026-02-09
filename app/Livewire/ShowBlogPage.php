@@ -3,7 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use App\Models\blogs;
+use App\Models\Blogs;
 
 class ShowBlogPage extends Component
 {
@@ -13,7 +13,7 @@ class ShowBlogPage extends Component
     public function mount($id)
     {
         $this->blogId = $id;
-        $this->blog = blogs::findOrFail($this->blogId); // Load the blog data based on the provided ID
+        $this->blog = Blogs::findOrFail($this->blogId); // Load the blog data based on the provided ID
     }
 
     public function render()

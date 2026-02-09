@@ -4,17 +4,17 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\DetailPage;
-use App\Models\aboutus;
-use App\Models\education;
-use App\Models\experience;
-use App\Models\service;
-use App\Models\skills;
-use App\Models\project;
-use App\Models\blogs;
+use App\Models\AboutUs;
+use App\Models\Education;
+use App\Models\Experience;
+use App\Models\Service;
+use App\Models\Skills;
+use App\Models\Project;
+use App\Models\Blogs;
 use App\Mail\ContactEmail;
 use Illuminate\Support\Facades\Mail;
-use App\Models\contacts;
-use App\Models\contactsimage;
+use App\Models\Contacts;
+use App\Models\ContactsImage;
 
 
 
@@ -41,15 +41,15 @@ class HomePage extends Component
      public function mount()
     {
         $this->homepage = DetailPage::orderBy('id', 'asc')->get(); // ✅ load data
-        $this->about = aboutus::orderBy('id', 'asc')->get();
-        $this->education=education::orderBy('id', 'asc')->get();
-        $this->experience=experience::orderBy('id', 'asc')->get();
-        $this->service=service::orderBy('id', 'asc')->get();
-        $this->skills=skills::orderBy('id', 'asc')->get();
-        $this->project=project::orderBy('id', 'asc')->get();
-        $this->blogs=blogs::orderBy('id', 'asc')->get();
-        $this->contacts=contacts::orderBy('id', 'asc')->get();
-        $this->contactimage=contactsimage::orderBy('id', 'asc')->get();
+        $this->about = AboutUs::orderBy('id', 'asc')->get();
+        $this->education=Education::orderBy('id', 'asc')->get();
+        $this->experience=Experience::orderBy('id', 'asc')->get();
+        $this->service=Service::orderBy('id', 'asc')->get();
+        $this->skills=Skills::orderBy('id', 'asc')->get();
+        $this->project=Project::orderBy('id', 'asc')->get();
+        $this->blogs=Blogs::orderBy('id', 'asc')->get();
+        $this->contacts=Contacts::orderBy('id', 'asc')->get();
+        $this->contactimage=ContactsImage::orderBy('id', 'asc')->get();
     }
 
     protected $rules = [

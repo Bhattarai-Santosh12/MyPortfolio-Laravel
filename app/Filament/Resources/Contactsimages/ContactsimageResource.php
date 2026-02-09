@@ -7,7 +7,7 @@ use App\Filament\Resources\Contactsimages\Pages\EditContactsimage;
 use App\Filament\Resources\Contactsimages\Pages\ListContactsimages;
 use App\Filament\Resources\Contactsimages\Schemas\ContactsimageForm;
 use App\Filament\Resources\Contactsimages\Tables\ContactsimagesTable;
-use App\Models\Contactsimage;
+use App\Models\ContactsImage;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -16,7 +16,7 @@ use Filament\Tables\Table;
 
 class ContactsimageResource extends Resource
 {
-    protected static ?string $model = Contactsimage::class;
+    protected static ?string $model = ContactsImage::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
